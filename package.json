@@ -2,8 +2,10 @@
   "name": "desafio-smart-tv",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts":{
-      "test": "jest"
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn run jest -- --watch",
+    "test:cove": "yarn run jest -- --coverage"
   },
   "author": "Clayton Inacio <tarcios.clay@gmail.com>",
   "license": "MIT",
