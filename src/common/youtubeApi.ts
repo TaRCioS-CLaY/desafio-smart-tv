@@ -1,4 +1,4 @@
-import { HttpGetClient } from "./httpCliente";
+import { HttpGetClient } from "./httpClient";
 
 export class YoutubeAPI {
     constructor(
