@@ -8,7 +8,7 @@ export class YoutubeAPI {
     ) { }
 
     async emAlta(): Promise<void> {
-        await this.httpGetClient.get({apiKey:this.apiKey, url:this.url})
+        await this.httpGetClient.get({ apiKey: this.apiKey, url: this.url })
     }
 
 }
