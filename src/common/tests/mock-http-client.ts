@@ -1,13 +1,19 @@
-import { HttpGetClient, HttpGetParams } from "common/httpClient";
+import { HttpGetClient, HttpGetParams } from "../httpClient";
+import { HttpResponse, HttpStatusCode } from "../httpResponse";
 
 export class HttpGetClientSpy implements HttpGetClient {
     apiKey?: string;
+
     url?: string;
 
-    async get(params: HttpGetParams): Promise<void> {
+    response: HttpResponse = {
+        statusCode: HttpStatusCode.noContent,
+    };
+
+    async get(params: HttpGetParams): Promise<HttpResponse> {
         this.apiKey = params.apiKey;
         this.url = params.url;
-        return Promise.resolve()
-    }
 
+        return Promise.resolve(this.response);
+    }
 }
